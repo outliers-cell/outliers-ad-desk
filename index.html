@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7c021e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADAAgMAAAAvsoSUAAAADFBMVEX///8ky+6nVGd8Ah6pax77AAACCElEQVR42u2YvU7DMBSFj91IVCpS+wgdunWAN0gegJnnyaMwIlgY2MkjMKDOYavE4gGkAFEvg53Evg4OZWDhZmjz98XX55zrVFWE4zYNAQQQQAABBBBAAAEEEECAvwOelSoA4F0ppbY/AK78g90pv0zRBiAnImrsDQ/h1XgEAmAAwAEXUyUd2PHbFNB2O8Z9FxNAA6D2TzxOAMa7eHMD4HVCpQprLO3OgqgB9IRKFVbDPHBSchX4AAfgDgsiohJLIjLMCT2iaiDLKVAmJ91CzzvP3A0mWZLBrMHMRuTM+/q2JIN5eKIMXYmAGpsMdEQ/VFj1IVzFyYjnADy00Fbf3Pq3DK7HNtABIKLWGcAAXtLHVJfrKKvqOMCpWgFtPN8xoEaWHkNHqq774sZnE6mauw/jGqFKRoOAksWzSo7QdU5OVNsIToSvjRsbXVZGJ7339fKK/BYIkjwfW9c0V5WD3D/Nu8VjM1ukToww0jg1M17zJcN6NSxMBW/ZwIbGultj0enfIGwH5kMc7j1wniipXzIa19Kfa2aDVcJ7vWWetS+3uAR0kZiDy43BjHrDFol3HGFYY3pgk0hrt1AY6D63mjdMqCp6dZvxisKShq4cInefCp+J+39bpIDa2ZABlS1p+8SfoOTvUwEEEECA/wCEr91dOfbMa5FVgB9s8tNBAAEEEEAAAX4LfAEFlBofC4+lDQAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADAAgMAAAAvsoSUAAAADFBMVEX///8ky+6nVGd8Ah6pax77AAACCElEQVR42u2YvU7DMBSFj91IVCpS+wgdunWAN0gegJnnyaMwIlgY2MkjMKDOYavE4gGkAFEvg53Evg4OZWDhZmjz98XX55zrVFWE4zYNAQQQQAABBBBAAAEEEECAvwOelSoA4F0ppbY/AK78g90pv0zRBiAnImrsDQ/h1XgEAmAAwAEXUyUd2PHbFNB2O8Z9FxNAA6D2TzxOAMa7eHMD4HVCpQprLO3OgqgB9IRKFVbDPHBSchX4AAfgDgsiohJLIjLMCT2iaiDLKVAmJ91CzzvP3A0mWZLBrMHMRuTM+/q2JIN5eKIMXYmAGpsMdEQ/VFj1IVzFyYjnADy00Fbf3Pq3DK7HNtABIKLWGcAAXtLHVJfrKKvqOMCpWgFtPN8xoEaWHkNHqq774sZnE6mauw/jGqFKRoOAksWzSo7QdU5OVNsIToSvjRsbXVZGJ7339fKK/BYIkjwfW9c0V5WD3D/Nu8VjM1ukToww0jg1M17zJcN6NSxMBW/ZwIbGultj0enfIGwH5kMc7j1wniipXzIa19Kfa2aDVcJ7vWWetS+3uAR0kZiDy43BjHrDFol3HGFYY3pgk0hrt1AY6D63mjdMqCp6dZvxisKShq4cInefCp+J+39bpIDa2ZABlS1p+8SfoOTvUwEEEECA/wCEr91dOfbMa5FVgB9s8tNBAAEEEEAAAX4LfAEFlBofC4+lDQAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+:root{color-scheme:light}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px system-ui,sans-serif}
+[hidden]{display:none!important}
+img{max-width:100%}
+</style>
+<title>Outliers AD Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Layout: sticky scoreboard-style header with section tabs; one working area below; tables and boards scroll inside their own boxes. */
+:root{
+  --bg:#f1f2f5; --surface:#ffffff; --surface2:#e8eaef; --line:#d3d7df;
+  --fg:#14171f; --muted:#596072;
+  --accent:#7c021e; --accent-ink:#ffffff; --cyan:#0b7f96; --cyan-fill:#0bc8ee;
+  --ok:#17692f; --ok-bg:#dcf1e3; --warn:#7d5200; --warn-bg:#faebc4;
+  --bad:#9c1219; --bad-bg:#fadcdd; --info:#2f4a78; --info-bg:#e0e8f6;
+  --font-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1117; --surface:#161a22; --surface2:#1e2330; --line:#2b3242;
+    --fg:#e8ebf1; --muted:#9aa3b5;
+    --accent:#f0627f; --accent-ink:#1b0509; --cyan:#3fd2ee; --cyan-fill:#0bc8ee;
+    --ok:#6fd48c; --ok-bg:#12301c; --warn:#f0c15a; --warn-bg:#35280a;
+    --bad:#ff8a90; --bad-bg:#3a1417; --info:#9db8ec; --info-bg:#1a2742;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1117; --surface:#161a22; --surface2:#1e2330; --line:#2b3242;
+  --fg:#e8ebf1; --muted:#9aa3b5;
+  --accent:#f0627f; --accent-ink:#1b0509; --cyan:#3fd2ee; --cyan-fill:#0bc8ee;
+  --ok:#6fd48c; --ok-bg:#12301c; --warn:#f0c15a; --warn-bg:#35280a;
+  --bad:#ff8a90; --bad-bg:#3a1417; --info:#9db8ec; --info-bg:#1a2742;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.45;padding-inline:0}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:.02em;margin:0;text-wrap:balance}
+a{color:var(--cyan)}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:16px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:3px solid var(--accent)}
+.top-in{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-block:10px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:.06em;text-transform:uppercase;line-height:1;display:flex;align-items:baseline;gap:8px}
+.brand i{font-style:normal;color:var(--accent)}
+.brand small{font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--muted)}
+nav{display:flex;gap:2px;flex-wrap:wrap;flex:1;min-width:0}
+nav a{font-family:var(--font-display);font-weight:600;font-size:17px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border-bottom:3px solid transparent;margin-bottom:-3px}
+nav a:hover{color:var(--fg)}
+nav a.on{color:var(--fg);border-bottom-color:var(--cyan-fill)}
+nav a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.sync{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:10px}
+main{padding-block:20px 56px;display:flex;flex-direction:column;gap:20px}
+.btn{background:var(--surface2);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;font-weight:500}
+.btn:hover{border-color:var(--muted)}
+.btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+.btn.sm{padding:3px 9px;font-size:13px}
+.btn.ghost{background:transparent}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.banner{border:1px solid var(--line);border-left:5px solid var(--warn);background:var(--warn-bg);color:var(--fg);padding:10px 14px;border-radius:6px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.banner.bad{border-left-color:var(--bad);background:var(--bad-bg)}
+.banner.info{border-left-color:var(--cyan);background:var(--info-bg)}
+.page-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.page-h h2{font-size:34px;text-transform:uppercase;line-height:1}
+.page-h p{margin:4px 0 0;color:var(--muted)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;min-width:0}
+.panel>h3{font-size:20px;text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}
+.panel>h3 span{font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.strip{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
+.strip>div{flex:1 1 150px;padding:12px 16px;border-right:1px solid var(--line);min-width:0}
+.strip>div:last-child{border-right:0}
+.strip b{display:block;font-family:var(--font-display);font-size:34px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.strip em{font-style:normal;font-size:12.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.list{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:78px 1fr auto;gap:4px 12px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .d{font-family:var(--font-display);font-size:19px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.row .d small{display:block;font-family:var(--font-body);font-size:12px;font-weight:400;color:var(--muted)}
+.row .t{min-width:0}
+.row .t small{display:block;color:var(--muted);font-size:13px}
+.empty{color:var(--muted);padding:6px 0}
+.pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.03em;padding:1px 8px;border-radius:99px;white-space:nowrap;border:1px solid transparent}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.bad{background:var(--bad-bg);color:var(--bad)}
+.pill.info{background:var(--info-bg);color:var(--info)}
+.pill.na{background:var(--surface2);color:var(--muted)}
+.chip{display:inline-block;font-size:11px;font-weight:600;padding:0 5px;border-radius:3px;margin-right:2px;letter-spacing:.03em}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}
+.chip.no{background:transparent;color:var(--bad);border:1px solid var(--bad)}
+.chip.na{background:var(--surface2);color:var(--muted)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.filters label{display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.filters select,.filters input[type=search],.filters input[type=text],.filters input[type=date],.filters input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 8px;min-width:120px;text-transform:none;letter-spacing:0;font-size:15px;color:var(--fg)}
+.filters .chk{flex-direction:row;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--fg);padding-bottom:7px}
+.tbl-box{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:860px}
+th{font-family:var(--font-display);font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-align:left;font-weight:600;color:var(--muted);padding:8px 10px;background:var(--surface2);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.mo td{font-family:var(--font-display);font-size:18px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--surface2);color:var(--accent);padding:5px 10px}
+tr.g{cursor:pointer}
+tr.g:hover td{background:var(--surface2)}
+tr.det td{background:var(--surface2);font-size:14px}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.dim{color:var(--muted)}
+.det-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 24px}
+.det-grid b{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.bars{display:flex;flex-direction:column;gap:5px}
+.bar{display:grid;grid-template-columns:64px 1fr 34px;align-items:center;gap:8px;font-size:13.5px}
+.bar i{display:block;height:14px;background:var(--cyan-fill);border-radius:2px;min-width:2px}
+.bar.m i{background:var(--accent)}
+.stack{display:flex;height:16px;border-radius:3px;overflow:hidden;background:var(--surface2)}
+.stack i{display:block;height:100%}
+.legend{display:flex;gap:4px 12px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:5px}
+.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;background:var(--c)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:4px 14px;cursor:pointer;font-weight:500}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.fields{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.fields label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:14px}
+.fields textarea,.fields input{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px;font-weight:400;min-width:0;width:100%;resize:vertical}
+.fields textarea{min-height:110px}
+.board{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:start}
+.col{background:var(--surface2);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.col>h3{font-size:18px;text-transform:uppercase;letter-spacing:.08em;display:flex;justify-content:space-between}
+.card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--cyan-fill);border-radius:6px;padding:9px 11px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.card.hi{border-left-color:var(--accent)}
+.card.over{border-color:var(--bad)}
+.card .m{font-size:13px;color:var(--muted);display:flex;gap:6px 10px;flex-wrap:wrap}
+.card .a{display:flex;gap:6px;flex-wrap:wrap}
+.card .tt{font-weight:600;overflow-wrap:anywhere}
+.fxgrid{display:grid;gap:8px 10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));margin-top:6px}
+.fxgrid label{display:flex;flex-direction:column;gap:2px;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;min-width:0}
+.fxgrid input,.fxgrid select{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:15px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--fg);min-width:0;width:100%}
+.fxgrid .wide{grid-column:1/-1}
+.card.done{border-left-color:var(--ok);opacity:.92}
+.fxsrc{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.scrub{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--cyan-fill);border-radius:8px;padding:12px 14px;margin-top:14px}
+.scrub h3{font-size:20px;text-transform:uppercase;letter-spacing:.05em;display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:6px}
+.scrub h3 span{font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.srow{display:grid;grid-template-columns:minmax(110px,160px) 112px 78px minmax(0,1fr);gap:4px 12px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line);font-size:14px}
+.srow:first-of-type{border-top:0}
+.srow .dt{color:var(--muted);overflow-wrap:anywhere}
+@media (max-width:620px){.srow{grid-template-columns:1fr auto}.srow .dt{grid-column:1/-1}.srow .tm{display:none}}
+.skel{color:var(--muted);padding:30px 0;text-align:center}
+.two{display:grid;gap:16px;grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}.brand small{display:none}}
+@media (max-width:520px){nav{flex:1 1 100%}nav a{padding:6px 8px;font-size:15px}.row{grid-template-columns:66px 1fr}.row>:last-child{grid-column:2}.page-h h2{font-size:28px}}
+@media (prefers-reduced-motion:no-preference){.card,.btn{transition:border-color .12s}}
+
+#gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:16px}
+#gate[hidden]{display:none}
+.gbox{max-width:360px;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px 24px;text-align:center;display:flex;flex-direction:column;gap:12px}
+.gtitle{font-family:"Barlow Condensed",system-ui,sans-serif;font-size:30px;font-weight:700;letter-spacing:.02em}
+.gtitle i{font-style:normal;color:var(--accent)}
+.gsub{margin:0;color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.gmsg{margin:0;min-height:1.2em;color:var(--bad);font-size:14px}
+.gnote{margin:0;color:var(--muted);font-size:13px}
+.who{font-size:12px;color:var(--muted);margin-right:8px}
+</style>
+</head>
+<body>
+
+
+<header class="top"><div class="wrap top-in">
+  <div class="brand"><i>Outliers</i> AD Desk <small>FAYETTEVILLE HOMESCHOOL SPORTS</small></div>
+  <nav id="nav" aria-label="Sections"></nav>
+  <div class="sync"><span id="sync">Reading the sheet...</span><button class="btn sm pri" data-act="scrub" id="scrubbtn" title="Re-read every source and confirm your fixes">Refresh scrub</button></div>
+</div></header>
+<div class="wrap" id="banners" aria-live="polite"></div>
+<div class="wrap" id="scrubwrap" aria-live="polite"></div>
+<main class="wrap" id="main"><div class="skel">Reading the Outliers Scheduling Tracker...</div></main>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+/* Outliers AD Desk standalone layer: Google sign-in + Google Sheets as the data store.
+   Provides window.claude.use("mcp"|"db"|"user") so the app code runs unchanged. */
+(function(){
+"use strict";
+const CLIENT_ID="267709633404-4gmbf096fe1snmfh9ih69elts63v3bmr.apps.googleusercontent.com";
+const SHEET="1pdrFTxkaBfOKv13y1E2D_qttII215H-_5kygHQHNA_M";
+const SCOPES="https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/userinfo.email";
+const API="https://sheets.googleapis.com/v4/spreadsheets/"+SHEET;
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const COLS={
+  tasks:{tab:"Tasks",n:12},
+  strategy:{tab:"Strategy",n:6},
+  fixes:{tab:"Fixes State",n:13},
+  scrubreq:{tab:"Scrub Requests",n:7}
+};
+let token=null,tokenExp=0,tc=null,me={email:"",name:"",role:"viewer",sport:""};
+const cache={};            // sheet name -> last values read (for sport lookups)
+const docsCache={};        // collection -> {id:data}
+const subs={};             // collection -> [handlers]
+let readyRes,readyRej;const ready=new Promise((a,b)=>{readyRes=a;readyRej=b;});
+let signedIn=false;
+
+function err(code,msg){const e=new Error(msg||code);e.code=code;return e;}
+function $(id){return document.getElementById(id);}
+
+/* ---------- sign-in ---------- */
+function gate(show,msg){
+  let g=$("gate");
+  if(!g){
+    g=document.createElement("div");g.id="gate";
+    g.innerHTML='<div class="gbox"><div class="gtitle"><i>Outliers</i> AD Desk</div><p class="gsub">Fayetteville Homeschool Sports</p><p id="gmsg" class="gmsg"></p><button id="gbtn" class="btn pri" type="button">Sign in with Google</button><p class="gnote">Use your fayhomeschoolsports.org account.</p></div>';
+    document.body.appendChild(g);
+    $("gbtn").addEventListener("click",()=>requestToken(true).catch(()=>{}));
+  }
+  g.hidden=!show;
+  if(msg!=null)$("gmsg").textContent=msg;
+}
+function waitGsi(){
+  return new Promise((res,rej)=>{let n=0;const t=setInterval(()=>{if(window.google&&google.accounts&&google.accounts.oauth2){clearInterval(t);res();}else if(++n>100){clearInterval(t);rej(err("gsi_unavailable","Google sign-in could not load. Check your connection."));}},100);});
+}
+let pending=null;
+function requestToken(interactive){
+  if(pending)return pending;
+  pending=new Promise(async(res,rej)=>{
+    try{
+      await waitGsi();
+      if(!tc){
+        tc=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:SCOPES,hd:"fayhomeschoolsports.org",callback:()=>{},error_callback:()=>{}});
+      }
+      tc.callback=r=>{
+        pending=null;
+        if(r&&r.access_token){token=r.access_token;tokenExp=Date.now()+(+r.expires_in||3600)*1000;try{localStorage.setItem("ad_signed","1");}catch(e){}res(token);}
+        else{rej(err("needs_reauth",(r&&r.error)||"Sign-in failed"));}
+      };
+      tc.error_callback=e=>{pending=null;rej(err("needs_reauth",(e&&e.type)||"Sign-in was closed"));};
+      tc.requestAccessToken({prompt:interactive?"select_account":""});
+    }catch(e){pending=null;rej(e);}
+  });
+  return pending;
+}
+async function tokenOk(){
+  if(token&&Date.now()<tokenExp-60000)return token;
+  try{return await requestToken(false);}
+  catch(e){gate(true,"Your sign-in expired. Please sign in again.");throw err("needs_reauth","Sign in again");}
+}
+async function api(path,opt){
+  opt=opt||{};
+  for(let attempt=0;attempt<2;attempt++){
+    const t=await tokenOk();
+    const r=await fetch(API+path,{method:opt.method||"GET",headers:Object.assign({"Authorization":"Bearer "+t},opt.body?{"Content-Type":"application/json"}:{}),body:opt.body?JSON.stringify(opt.body):undefined});
+    if(r.status===401&&attempt===0){token=null;continue;}
+    if(!r.ok){
+      let m="";try{m=(await r.json()).error.message;}catch(e){}
+      const code=r.status===401?"needs_reauth":r.status===403?"not_in_manifest":r.status===429?"rate_limited":r.status>=500?"upstream_error":"tool_error";
+      throw err(code,m||("HTTP "+r.status));
+    }
+    return r.json();
+  }
+  throw err("needs_reauth","Sign in again");
+}
+const enc=encodeURIComponent;
+function sheetOf(range){const m=String(range).match(/^'?([^'!]+)'?!/);return m?m[1]:"";}
+
+async function loadMe(){
+  const t=await tokenOk();
+  let email="";
+  try{const u=await (await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{headers:{Authorization:"Bearer "+t}})).json();email=(u.email||"").toLowerCase();me.name=u.name||"";}catch(e){}
+  me.email=email;
+  try{
+    const r=await api("/values/"+enc("Users!A2:E60"));
+    const rows=r.values||[];
+    const row=rows.find(x=>String(x[0]||"").trim().toLowerCase()===email);
+    if(row){me.name=row[1]||me.name;me.sport=row[2]||"";me.role=String(row[3]||"viewer").toLowerCase();}
+  }catch(e){}
+  if(me.role==="admin")me.sport="All";
+}
+
+/* ---------- permissions ---------- */
+function sportMatch(s){
+  if(me.role==="admin")return true;
+  if(me.role!=="director"||!s||!me.sport)return false;
+  const a=String(s).toLowerCase(),b=String(me.sport).toLowerCase();
+  return a===b||a.includes(b)||b.includes(a);
+}
+function denyWrite(sport){
+  if(me.role==="viewer")return err("read_only","Your account is view-only.");
+  return err("not_your_sport","You can edit "+(me.sport||"your sport")+" only"+(sport?", not "+sport:"")+".");
+}
+function checkSheetWrite(range){
+  if(me.role==="admin")return;
+  const sh=sheetOf(range);const m=String(range).match(/!([A-Z]+)(\d+)/);
+  if(!m)throw denyWrite();
+  const row=+m[2];
+  let sport="";
+  if(sh==="Games"&&cache.Games&&cache.Games[row-1])sport=cache.Games[row-1][2];
+  else if(sh==="Fix Queue"&&cache["Fix Queue"]&&cache["Fix Queue"][row-1])sport=cache["Fix Queue"][row-1][3];
+  else throw denyWrite();
+  if(!sportMatch(sport))throw denyWrite(sport);
+}
+
+/* ---------- mcp (Google Sheets only) ---------- */
+function payloadOf(v){return {payload:{values:v.values||[]},cache:{storedAt:Date.now()}};}
+async function getValues(range){
+  const r=await api("/values/"+enc(range)+"?valueRenderOption=FORMATTED_VALUE");
+  const sh=sheetOf(range);if(sh)cache[sh]=r.values||[];
+  return payloadOf(r);
+}
+const mcp={
+  async callTool(server,tool,input){
+    if(server!=="Google Sheets")throw err("server_not_connected","Only the Google Sheet is available in the app.");
+    if(tool==="get_values")return getValues(input.range);
+    if(tool==="update_values"){
+      checkSheetWrite(input.range);
+      await api("/values/"+enc(input.range)+"?valueInputOption=USER_ENTERED",{method:"PUT",body:{range:input.range,values:input.values}});
+      return {payload:{ok:true}};
+    }
+    throw err("not_in_manifest","Tool not available: "+tool);
+  },
+  watchTool(server,tool,input,handler,opts){
+    const run=async()=>{
+      try{const r=await mcp.callTool(server,tool,input);handler({type:"data",result:r});}
+      catch(e){handler({type:"error",error:e});}
+    };
+    run();
+    const iv=(opts&&opts.refetchInterval)||0;
+    if(iv)setInterval(()=>{if(!document.hidden)run();},iv);
+    return ()=>{};
+  },
+  async invalidate(){}
+};
+
+/* ---------- db on Sheet tabs ---------- */
+function disp(v){
+  if(v==null||v==="")return "";
+  let d=null;
+  if(typeof v==="number")d=new Date(v);
+  else if(/^\d{4}-\d{2}-\d{2}/.test(v)){const p=v.slice(0,10).split("-");return (+p[2])+" "+MON[+p[1]-1]+" "+p[0].slice(2);}
+  if(d&&!isNaN(d))return d.getDate()+" "+MON[d.getMonth()]+" "+String(d.getFullYear()).slice(2)+" "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");
+  return String(v);
+}
+function isoOf(s){
+  if(!s)return "";
+  if(/^\d{4}-\d{2}-\d{2}/.test(s))return s.slice(0,10);
+  const m=String(s).match(/(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{2,4})/);
+  if(!m)return "";
+  const mi=MON.findIndex(x=>x.toLowerCase()===m[2].toLowerCase());if(mi<0)return "";
+  let y=+m[3];if(y<100)y+=2000;
+  return y+"-"+String(mi+1).padStart(2,"0")+"-"+String(+m[1]).padStart(2,"0");
+}
+function rowOut(c,id,d){
+  const n=COLS[c].n;let r;
+  if(c==="tasks")r=[id,d.title||"",d.sport||"",d.owner||"",disp(d.due),d.status||"",d.priority||"",d.notes||"",disp(d.created),disp(d.updated),me.name||me.email];
+  else if(c==="strategy")r=[d.sport||id,disp(d.updated),me.name||me.email,""];
+  else if(c==="fixes")r=[id,d.gid||"",d.sport||"",d.time||"",d.ha||"",d.opp||"",d.decision||"",d.note||"",d.applied?"yes":"",d.verified?"yes":"",disp(d.updated),me.name||me.email];
+  else r=[id,d.status||"",disp(d.requestedAt),disp(d.checkedAt),d.summary||""];
+  while(r.length<n-1)r.push("");
+  r.push(JSON.stringify(Object.assign({},d,c==="strategy"&&!d.sport?{}:{})));
+  return r;
+}
+function rowIn(c,r){
+  const n=COLS[c].n;const js=r[n-1];
+  if(js){try{return JSON.parse(js);}catch(e){}}
+  if(c==="tasks")return {title:r[1]||"",sport:r[2]||"",owner:r[3]||"",due:isoOf(r[4]),status:r[5]||"todo",priority:r[6]||"med",notes:r[7]||"",created:isoOf(r[8])};
+  return null;
+}
+async function readTab(c){
+  const t=COLS[c].tab,last=String.fromCharCode(64+COLS[c].n);
+  const r=await api("/values/"+enc(t+"!A2:"+last+"600"));
+  const out={},idx={};
+  (r.values||[]).forEach((row,i)=>{const id=String(row[0]||"").trim();if(!id)return;const d=rowIn(c,row);if(d){out[id]=d;idx[id]=i+2;}});
+  docsCache[c]=out;docsCache[c+"#rows"]=idx;
+  return out;
+}
+function snapOf(c){return {docs:Object.keys(docsCache[c]||{}).map(id=>({id,data:()=>docsCache[c][id]}))};}
+async function refresh(c){
+  try{await readTab(c);(subs[c]||[]).forEach(s=>s.ok(snapOf(c)));}
+  catch(e){(subs[c]||[]).forEach(s=>s.bad&&s.bad(e));}
+}
+function checkDocWrite(c,id,data){
+  if(me.role==="admin")return;
+  if(me.role==="viewer")throw denyWrite();
+  if(c==="scrubreq")throw denyWrite();
+  const sport=c==="strategy"?(data&&data.sport)||id:(data&&data.sport)||((docsCache[c]||{})[id]||{}).sport;
+  if(!sportMatch(sport))throw denyWrite(sport);
+}
+const db={
+  doc(path){
+    const [c,id]=path.split("/");
+    if(!COLS[c])throw err("invalid_argument","Unknown collection "+c);
+    return {
+      async set(data){
+        const old=(docsCache[c]||{})[id];
+        checkDocWrite(c,id,old&&!data.sport?Object.assign({},old,data):data);
+        const t=COLS[c].tab,last=String.fromCharCode(64+COLS[c].n);
+        await readTab(c);
+        const row=rowOut(c,id,Object.assign({},data));
+        const idx=(docsCache[c+"#rows"]||{})[id];
+        if(idx)await api("/values/"+enc(t+"!A"+idx+":"+last+idx)+"?valueInputOption=RAW",{method:"PUT",body:{range:t+"!A"+idx+":"+last+idx,values:[row]}});
+        else await api("/values/"+enc(t+"!A1")+":append?valueInputOption=RAW&insertDataOption=INSERT_ROWS",{method:"POST",body:{values:[row]}});
+        await refresh(c);
+      },
+      async delete(){
+        checkDocWrite(c,id,null);
+        const t=COLS[c].tab,last=String.fromCharCode(64+COLS[c].n);
+        await readTab(c);
+        const idx=(docsCache[c+"#rows"]||{})[id];
+        if(idx)await api("/values/"+enc(t+"!A"+idx+":"+last+idx)+":clear",{method:"POST",body:{}});
+        await refresh(c);
+      }
+    };
+  },
+  collection(c){
+    if(!COLS[c])throw err("invalid_argument","Unknown collection "+c);
+    return {
+      onSnapshot(ok,bad){
+        (subs[c]=subs[c]||[]).push({ok,bad});
+        refresh(c);
+        if(subs[c].length===1)setInterval(()=>{if(!document.hidden)refresh(c);},60000);
+      }
+    };
+  }
+};
+
+/* ---------- user ---------- */
+const user={
+  can(n){return n==="data.write"?me.role!=="viewer":true;},
+  canEdit(){return me.role==="admin";},
+  isOwner(){return me.role==="admin";},
+  async id(){return me.email;},
+  async me(){return {id:me.email,name:me.name||me.email};}
+};
+
+/* ---------- entry point used by the app ---------- */
+window.claude={use:async n=>{await ready;return n==="mcp"?mcp:n==="db"?db:n==="user"?user:null;}};
+window.__adMe=()=>me;
+
+function chip(){
+  const s=document.querySelector(".sync");if(!s||$("who"))return;
+  const w=document.createElement("span");w.id="who";w.className="who";
+  w.textContent=(me.name||me.email)+" · "+(me.role==="admin"?"admin":me.role==="director"?me.sport+" director":"view only");
+  const b=document.createElement("button");b.className="btn sm";b.type="button";b.textContent="Sign out";
+  b.addEventListener("click",()=>{try{if(token&&window.google)google.accounts.oauth2.revoke(token,()=>{});localStorage.removeItem("ad_signed");}catch(e){}token=null;location.reload();});
+  s.prepend(w);s.appendChild(b);
+}
+async function start(){
+  gate(true,"");
+  let auto=false;try{auto=localStorage.getItem("ad_signed")==="1";}catch(e){}
+  if(auto){
+    try{$("gmsg").textContent="Signing you in...";await requestToken(false);}catch(e){$("gmsg").textContent="";}
+  }
+  const go=async()=>{await loadMe();signedIn=true;gate(false);chip();readyRes(true);};
+  if(token){try{await go();return;}catch(e){}}
+  // wait for the button
+  const iv=setInterval(async()=>{if(token&&!signedIn){clearInterval(iv);try{await go();}catch(e){gate(true,e.message);}}},300);
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+})();
+
+</script>
+<script>
+(function(){
+"use strict";
+const SHEET="1pdrFTxkaBfOKv13y1E2D_qttII215H-_5kygHQHNA_M", SERVER="Google Sheets", TOOL="get_values";
+const SRC={games:"Games!A1:T400",contacts:"Contacts!A1:I150",comms:"'Comms Log'!A1:H800",ad:"'AD Status'!A1:H300",fix:"'Fix Queue'!A1:O200"};
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const VIEWS=[["briefing","Briefing"],["schedule","Schedule"],["contacts","Contacts"],["fixes","Fixes"],["strategy","Strategy"],["tasks","Tasks"],["budget","Budget"]];
+const DAY=864e5;
+
+const S={games:[],contacts:[],comms:[],ad:[],fix:[],loaded:{},err:{},stored:{},tasks:[],strat:{},fixes:{},fxMsg:{},armed:null,scrubreq:{},scrub:null,dbOk:false,canWrite:null,
+  f:{sport:"All",level:"All",status:"All",ha:"All",q:"",upcoming:true,cq:"",tsport:"All",fxshow:"Open",fxsev:"All",fxsport:"All",strat:null,bsport:"All",weekGame:""},
+  open:{},saveMsg:"",dirty:false,mcp:null,mcpNull:false};
+
+/* ---------- helpers ---------- */
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $=id=>document.getElementById(id);
+function todayU(){const n=new Date();return Date.UTC(n.getFullYear(),n.getMonth(),n.getDate());}
+function pd(s){
+  if(!s)return null;
+  const m=String(s).match(/(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{2,4})/);
+  if(!m)return null;
+  const mi=MON.findIndex(x=>x.toLowerCase()===m[2].toLowerCase());
+  if(mi<0)return null;
+  let y=+m[3]; if(y<100)y+=2000;
+  return Date.UTC(y,mi,+m[1]);
+}
+function dd(u){return new Date(u);}
+function fmtD(u,withDow){if(u==null)return "TBD";const d=dd(u);return (withDow?DOW[d.getUTCDay()]+" ":"")+d.getUTCDate()+" "+MON[d.getUTCMonth()];}
+function fmtRange(g){
+  if(g.d==null)return esc(g.dateStr||"TBD");
+  if(g.e!=null&&g.e!==g.d){const a=dd(g.d),b=dd(g.e);
+    return a.getUTCMonth()===b.getUTCMonth()?esc(a.getUTCDate()+" to "+b.getUTCDate()+" "+MON[a.getUTCMonth()]):esc(fmtD(g.d)+" to "+fmtD(g.e));}
+  return esc(fmtD(g.d,true));
+}
+function fmtT(t){
+  const m=String(t||"").match(/^(\d{1,2}):(\d{2})/);
+  if(!m)return t?String(t):"TBD";
+  let h=+m[1];const ap=h>=12?"pm":"am";h=h%12||12;return h+":"+m[2]+" "+ap;
+}
+function daysTo(u){return Math.round((u-todayU())/DAY);}
+function iso(u){const d=dd(u);return d.getUTCFullYear()+"-"+String(d.getUTCMonth()+1).padStart(2,"0")+"-"+String(d.getUTCDate()).padStart(2,"0");}
+function isoToU(s){const m=String(s||"").match(/^(\d{4})-(\d{2})-(\d{2})$/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
+const norm=s=>String(s||"").toLowerCase().replace(/\(.*?\)/g,"").replace(/[^a-z0-9]+/g," ").trim();
+const slug=s=>String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"sport";
+function stCls(s){const v=String(s||"").toLowerCase();
+  if(v.startsWith("confirm"))return "ok"; if(v.startsWith("tent")||v.startsWith("hold"))return "warn";
+  if(v.startsWith("propos"))return "info"; if(v.startsWith("cancel")||v.startsWith("post"))return "bad"; return "na";}
+const pill=(txt,cls)=>`<span class="pill ${cls||stCls(txt)}">${esc(txt||"No status")}</span>`;
+function chip(l,v){const x=String(v||"").trim().toLowerCase();const c=x==="yes"?"ok":x==="no"?"no":"na";return `<span class="chip ${c}" title="${esc(l)}: ${esc(v||"blank")}">${l}</span>`;}
+function num(v){const n=parseFloat(String(v||"").replace(/[^0-9.\-]/g,""));return isNaN(n)?null:n;}
+const money=n=>"$"+(Math.round(n*100)/100).toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:2});
+const uniq=a=>[...new Set(a.filter(Boolean))];
+function pad(r,n){const o=r.slice();while(o.length<n)o.push("");return o;}
+
+/* ---------- parsing ---------- */
+function parseRows(key,rows){
+  if(!Array.isArray(rows))rows=[];
+  if(key==="games"){
+    S.games=rows.slice(1).map((r,i)=>{r=pad(r,20);return{row:i+2,id:r[0],season:r[1],sport:r[2],level:r[3],dateStr:r[4],endStr:r[5],time:r[6],opp:r[7],ha:r[8],loc:r[9],status:r[10],confirmed:r[11],band:r[12],mp:r[13],gc:r[14],df:r[15],ref:r[16],todo:r[17],links:r[18],notes:r[19],d:pd(r[4]),e:pd(r[5])};}).filter(g=>g.id||g.opp);
+  }else if(key==="contacts"){
+    S.contacts=rows.slice(1).map(r=>{r=pad(r,9);return{school:r[0],ad:r[1],email:r[2],phone:r[3],gv:r[4],bb:r[5],bs:r[6],bv:r[7],notes:r[8]};}).filter(c=>c.school);
+  }else if(key==="comms"){
+    S.comms=rows.slice(1).map(r=>{r=pad(r,8);return{dateStr:r[0],school:r[1],dir:r[2],channel:r[3],sport:r[4],season:r[5],summary:r[6],source:r[7],d:pd(r[0])};}).filter(c=>c.school);
+  }else if(key==="ad"){
+    S.ad=rows.slice(1).map(r=>{r=pad(r,8);return{school:r[0],ad:r[1],sport:r[2],season:r[3],status:r[4],last:pd(r[5]),out:pd(r[6]),inn:pd(r[7])};}).filter(c=>c.school);
+  }else if(key==="fix"){
+    S.fix=rows.slice(2).map((r,i)=>{r=pad(r,15);return{n:r[0],sev:r[1],check:r[2],sport:r[3],level:r[4],date:r[5],gid:r[6],wrong:r[7],tracker:r[8],band:r[9],mp:r[10],time:r[11],ha:r[12],opp:r[13],decision:r[14],row:i+3};}).filter(f=>f.sev||f.check);
+  }
+}
+function handler(key){
+  return ev=>{
+    if(ev.type==="data"){
+      let p=ev.result&&ev.result.payload;
+      if(typeof p==="string"){try{p=JSON.parse(p);}catch(e){p=null;}}
+      if(!p&&ev.result&&ev.result.content&&ev.result.content[0]&&ev.result.content[0].text){try{p=JSON.parse(ev.result.content[0].text);}catch(e){p=null;}}
+      parseRows(key,p&&p.values);
+      S.loaded[key]=true;delete S.err[key];
+      S.stored[key]=(ev.result.cache&&ev.result.cache.storedAt)||Date.now();
+    }else if(ev.error){
+      S.err[key]=ev.error.code||"upstream_error";
+      if(["needs_reauth","server_not_connected","blocked_by_policy","not_in_manifest","consent_required"].includes(S.err[key])){S.loaded[key]=false;}
+    }
+    softRender();
+  };
+}
+
+/* ---------- derived data ---------- */
+function sports(){return uniq(S.games.map(g=>g.sport)).sort();}
+function levels(){return uniq(S.games.map(g=>g.level)).sort();}
+function statuses(){return uniq(S.games.map(g=>g.status)).sort();}
+function sortG(a,b){const x=a.d==null?9e15:a.d,y=b.d==null?9e15:b.d;return x-y||String(a.time).localeCompare(String(b.time));}
+function schoolIndex(){
+  const m=new Map();
+  const get=(name)=>{const k=norm(name);if(!m.has(k))m.set(k,{key:k,school:name,ad:"",email:"",phone:"",gv:"",bb:"",bs:"",bv:"",notes:"",out:null,inn:null,last:null,rows:[],hasContact:false});return m.get(k);};
+  S.contacts.forEach(c=>{const o=get(c.school);Object.assign(o,{school:c.school,ad:c.ad,email:c.email,phone:c.phone,gv:c.gv,bb:c.bb,bs:c.bs,bv:c.bv,notes:c.notes,hasContact:true});});
+  S.ad.forEach(a=>{const o=get(a.school);if(!o.ad)o.ad=a.ad;o.rows.push(a);
+    if(a.out!=null&&(o.out==null||a.out>o.out))o.out=a.out;
+    if(a.inn!=null&&(o.inn==null||a.inn>o.inn))o.inn=a.inn;
+    if(a.last!=null&&(o.last==null||a.last>o.last))o.last=a.last;});
+  S.comms.forEach(c=>{const o=get(c.school);if(c.d==null)return;
+    const dir=String(c.dir).toLowerCase();
+    if(dir.startsWith("out")&&(o.out==null||c.d>o.out))o.out=c.d;
+    if(dir.startsWith("in")&&(o.inn==null||c.d>o.inn))o.inn=c.d;
+    if(o.last==null||c.d>o.last)o.last=c.d;});
+  const out=[...m.values()];
+  out.forEach(o=>{o.last=Math.max(o.last||0,o.out||0,o.inn||0)||null;o.waiting=o.out!=null&&(o.inn==null||o.out>o.inn);o.waitDays=o.waiting?-daysTo(o.out):0;});
+  return out;
+}
+function upcoming(g){return g.d!=null&&(g.e!=null?g.e:g.d)>=todayU();}
+
+/* ---------- views ---------- */
+function loadingOrNull(keys){
+  const miss=keys.filter(k=>!S.loaded[k]);
+  if(!miss.length)return null;
+  const bad=miss.some(k=>S.err[k]);
+  return `<div class="skel">${bad?"The sheet could not be read yet. See the notice above.":"Reading the "+esc(miss.join(", "))+" tab..."}</div>`;
+}
+
+function viewBriefing(){
+  const wait=loadingOrNull(["games"]);
+  if(wait)return head("Briefing","What is coming up, what is unconfirmed, and what needs you.")+wait;
+  const t=todayU();
+  const up=S.games.filter(upcoming).sort(sortG);
+  const next=up.filter(g=>g.d-t<=14*DAY);
+  const nextList=(next.length?next:up).slice(0,8);
+  const un=up.filter(g=>!String(g.status).toLowerCase().startsWith("confirm")&&g.d-t<=75*DAY).slice(0,9);
+  const unAll=up.filter(g=>!String(g.status).toLowerCase().startsWith("confirm")).length;
+  const fixes=fixList().filter(f=>!f.resolved&&/high|med/i.test(f.sev));
+  const high=fixList().filter(f=>!f.resolved&&/high/i.test(f.sev)).length;
+  const schools=schoolIndex().filter(s=>s.waiting).sort((a,b)=>b.waitDays-a.waitDays);
+  const myTasks=S.tasks.filter(x=>x.status!=="done").map(x=>({...x,u:isoToU(x.due)}));
+  const dueSoon=myTasks.filter(x=>x.u!=null&&x.u-t<=7*DAY).sort((a,b)=>a.u-b.u);
+  const over=dueSoon.filter(x=>x.u<t).length;
+  const gameRow=g=>`<div class="row"><div class="d">${esc(fmtD(g.d))}<small>${esc(DOW[dd(g.d).getUTCDay()])} ${esc(fmtT(g.time))}</small></div>
+    <div class="t">${esc(g.opp||"Opponent TBD")}<small>${esc(g.sport)} ${esc(g.level)} | ${esc(g.ha||"")} ${g.loc?"| "+esc(g.loc):""}</small></div><div>${pill(g.status)}</div></div>`;
+  return head("Briefing","Week of "+fmtD(t)+". Read live from the tracker.",`<button class="btn pri" data-act="copybrief">Copy briefing text</button>`)+
+  `<div class="strip">
+    <div><b>${up.length}</b><em>Games ahead</em></div>
+    <div><b>${unAll}</b><em>Not confirmed</em></div>
+    <div><b>${high}</b><em>High fixes open</em></div>
+    <div><b>${schools.length}</b><em>Waiting on replies</em></div>
+    <div><b>${over?over:dueSoon.length}</b><em>${over?"Tasks overdue":"Tasks due in 7 d"}</em></div>
+  </div>
+  <div class="grid">
+    <section class="panel"><h3>${next.length?"Next 14 days":"Next games"}<span>${nextList.length} shown</span></h3><div class="list">${nextList.map(gameRow).join("")||'<div class="empty">No upcoming games in the tracker.</div>'}</div></section>
+    <section class="panel"><h3>Needs confirming<span>next 75 days</span></h3><div class="list">${un.map(gameRow).join("")||'<div class="empty">Everything in the next 75 days is confirmed.</div>'}</div></section>
+    <section class="panel"><h3>Fix Queue<span>${fixes.length} high or medium</span></h3><div class="list">${
+      S.loaded.fix?(fixes.slice(0,7).map(f=>`<div class="row" style="grid-template-columns:62px 1fr"><div>${pill(f.sev,/high/i.test(f.sev)?"bad":"warn")}</div><div class="t">${esc(f.gid||f.sport)} ${esc(f.date)}<small>${esc(f.wrong)}</small></div></div>`).join("")||'<div class="empty">No open fixes.</div>'):'<div class="empty">Reading the Fix Queue...</div>'}</div>
+      <p class="dim" style="margin:8px 0 0;font-size:13px">Enter fixes on the <a href="#fixes">Fixes</a> page. Nothing here changes BAND, MaxPreps or GameChanger.</p></section>
+    <section class="panel"><h3>Waiting on a reply<span>${schools.length} schools</span></h3><div class="list">${
+      (S.loaded.contacts||S.loaded.ad||S.loaded.comms)?(schools.slice(0,8).map(s=>`<div class="row" style="grid-template-columns:1fr auto"><div class="t">${esc(s.school)}<small>${esc(s.ad||"")}</small></div><div class="num dim">${s.waitDays} d</div></div>`).join("")||'<div class="empty">No outbound messages are waiting.</div>'):'<div class="empty">Reading contacts...</div>'}</div></section>
+    <section class="panel"><h3>Tasks due<span>${S.dbOk?"from the Tasks board":"board unavailable"}</span></h3><div class="list">${
+      dueSoon.slice(0,8).map(x=>`<div class="row" style="grid-template-columns:78px 1fr"><div class="d">${esc(fmtD(x.u))}<small>${x.u<t?"overdue":"due"}</small></div><div class="t">${esc(x.title)}<small>${esc(x.sport||"All sports")}</small></div></div>`).join("")||'<div class="empty">Nothing due in the next 7 days.</div>'}</div></section>
+  </div>`;
+}
+function head(t,sub,right){return `<div class="page-h"><div><h2>${esc(t)}</h2><p>${esc(sub||"")}</p></div><div>${right||""}</div></div>`;}
+
+function sel(id,label,opts,val){return `<label>${esc(label)}<select data-f="${id}">${opts.map(o=>`<option${o===val?" selected":""}>${esc(o)}</option>`).join("")}</select></label>`;}
+
+function viewSchedule(){
+  const wait=loadingOrNull(["games"]);
+  if(wait)return head("Schedule","Every game in the tracker.")+wait;
+  const f=S.f,q=f.q.trim().toLowerCase();
+  let rows=S.games.filter(g=>(f.sport==="All"||g.sport===f.sport)&&(f.level==="All"||g.level===f.level)&&(f.status==="All"||g.status===f.status)&&(f.ha==="All"||g.ha===f.ha)&&(!f.upcoming||upcoming(g)||g.d==null)&&(!q||[g.opp,g.loc,g.notes,g.id].join(" ").toLowerCase().includes(q))).sort(sortG);
+  const conf=rows.filter(g=>String(g.status).toLowerCase().startsWith("confirm"));
+  const cov=k=>`${conf.filter(g=>String(g[k]).trim().toLowerCase()==="yes").length}/${conf.length}`;
+  let html=head("Schedule",rows.length+" games shown. Click a row for notes and to-dos.",`<a href="https://docs.google.com/spreadsheets/d/${SHEET}/edit#gid=1919147228" target="_blank" rel="noopener">Open the Games tab</a>`)+
+  `<div class="filters">
+    ${sel("sport","Sport",["All",...sports()],f.sport)}${sel("level","Level",["All",...levels()],f.level)}${sel("status","Status",["All",...statuses()],f.status)}${sel("ha","Home / Away",["All",...uniq(S.games.map(g=>g.ha)).sort()],f.ha)}
+    <label>Search<input type="search" id="f-q" data-f="q" value="${esc(f.q)}" placeholder="Opponent, venue, note"></label>
+    <label class="chk"><input type="checkbox" data-f="upcoming"${f.upcoming?" checked":""}> Upcoming only</label>
+  </div>
+  <div class="dim" style="font-size:13.5px">Confirmed games listed on: BAND ${cov("band")} | MaxPreps ${cov("mp")} | GameChanger ${cov("gc")} | DragonFly ${cov("df")}</div>
+  <div class="tbl-box"><table><thead><tr><th>Date</th><th>Time</th><th>Team</th><th>Opponent</th><th>H/A</th><th>Location</th><th>Status</th><th>Listed on</th><th>Ref</th></tr></thead><tbody>`;
+  let lastM="";
+  rows.forEach(g=>{
+    const mk=g.d==null?"No date":MON[dd(g.d).getUTCMonth()]+" "+dd(g.d).getUTCFullYear();
+    if(mk!==lastM){html+=`<tr class="mo"><td colspan="9">${esc(mk)}</td></tr>`;lastM=mk;}
+    html+=`<tr class="g" data-act="toggle" data-id="${esc(g.id)}"><td class="num">${fmtRange(g)}</td><td class="num">${esc(fmtT(g.time))}</td><td>${esc(g.sport)} <span class="dim">${esc(g.level)}</span></td><td>${esc(g.opp)}</td><td>${esc(g.ha)}</td><td class="dim">${esc(g.loc)}</td><td>${pill(g.status)}</td><td>${chip("BAND",g.band)}${chip("MP",g.mp)}${chip("GC",g.gc)}${chip("DF",g.df)}</td><td class="num">${g.ref?esc(g.ref):""}</td></tr>`;
+    if(S.open[g.id]){html+=`<tr class="det"><td colspan="9"><div class="det-grid">
+      <div><b>Game ID</b>${esc(g.id)}</div><div><b>Season</b>${esc(g.season)}</div><div><b>Date confirmed</b>${esc(g.confirmed||"Not recorded")}</div>
+      <div><b>To do</b>${esc(g.todo||"None")}</div><div><b>Platform links</b>${esc(g.links||"None")}</div><div style="grid-column:1/-1"><b>Notes</b>${esc(g.notes||"None")}</div></div></td></tr>`;}
+  });
+  if(!rows.length)html+=`<tr><td colspan="9" class="empty">No games match these filters.</td></tr>`;
+  return html+`</tbody></table></div>`;
+}
+
+function viewContacts(){
+  const wait=loadingOrNull(["contacts"]);
+  if(wait)return head("Contacts","Opponent ADs and where each conversation stands.")+wait;
+  const q=S.f.cq.trim().toLowerCase();
+  let list=schoolIndex().filter(s=>!q||[s.school,s.ad,s.email,s.notes].join(" ").toLowerCase().includes(q));
+  list.sort((a,b)=>((b.last==null?-1:b.last)-(a.last==null?-1:a.last))||String(a.school).localeCompare(b.school));
+  const rowsH=list.map(s=>{
+    const prog=[["G-Vball",s.gv],["Basketball",s.bb],["Baseball",s.bs],["B-Vball",s.bv]].filter(x=>String(x[1]).trim().toLowerCase()==="yes").map(x=>`<span class="chip na">${x[0]}</span>`).join("");
+    const outreach=s.rows.map(r=>`<div>${esc(r.sport)} ${esc(r.season)}: <b>${esc(r.status)}</b></div>`).join("");
+    return `<tr><td><b>${esc(s.school)}</b><div class="dim">${esc(s.ad||"")}</div></td>
+      <td>${s.email?esc(s.email):'<span class="dim">no email</span>'}<div class="dim">${esc(s.phone||"")}</div></td>
+      <td>${prog||'<span class="dim">none marked</span>'}</td>
+      <td style="font-size:13.5px">${outreach||'<span class="dim">no outreach row</span>'}</td>
+      <td class="num">${s.last?esc(fmtD(s.last))+" "+dd(s.last).getUTCFullYear()%100:'<span class="dim">none</span>'}</td>
+      <td>${s.waiting?pill("Waiting "+s.waitDays+" d","warn"):s.inn!=null?pill("Replied","ok"):'<span class="dim">no thread</span>'}</td>
+      <td style="max-width:260px;font-size:13.5px">${esc(s.notes||"")}</td></tr>`;}).join("");
+  // outreach funnel
+  const groups=new Map();S.ad.forEach(a=>{const k=a.sport+" "+a.season;if(!groups.has(k))groups.set(k,[]);groups.get(k).push(a);});
+  const colorFor=st=>{const v=st.toLowerCase();return v.includes("not")?"var(--line)":v.includes("discuss")||v.includes("progress")?"var(--cyan-fill)":v.includes("confirm")||v.includes("schedul")||v.includes("set")?"var(--ok)":v.includes("declin")||v.includes("no ")?"var(--bad)":"var(--warn)";};
+  const funnel=[...groups.entries()].map(([k,arr])=>{
+    const cnt={};arr.forEach(a=>{cnt[a.status||"No status"]=(cnt[a.status||"No status"]||0)+1;});
+    return `<div style="margin-bottom:14px"><b>${esc(k)}</b> <span class="dim">${arr.length} schools</span><div class="stack">${Object.entries(cnt).map(([s,n])=>`<i style="width:${n/arr.length*100}%;background:${colorFor(s)}" title="${esc(s)}: ${n}"></i>`).join("")}</div><div class="legend">${Object.entries(cnt).map(([s,n])=>`<span style="--c:${colorFor(s)}">${esc(s)} ${n}</span>`).join("")}</div></div>`;}).join("");
+  const feed=S.comms.filter(c=>c.d!=null).sort((a,b)=>b.d-a.d).slice(0,14).map(c=>`<div class="row" style="grid-template-columns:62px 1fr"><div class="d">${esc(fmtD(c.d))}<small>${/^out/i.test(c.dir)?"sent":"reply"}</small></div><div class="t">${esc(c.school)}<small>${esc(c.summary)}</small></div></div>`).join("");
+  return head("Contacts",list.length+" schools. Most recently contacted first.",`<a href="https://docs.google.com/spreadsheets/d/${SHEET}/edit#gid=1864440226" target="_blank" rel="noopener">Open the Contacts tab</a>`)+
+  `<div class="filters"><label>Search<input type="search" id="f-cq" data-f="cq" value="${esc(S.f.cq)}" placeholder="School, AD, email"></label></div>
+  <div class="tbl-box"><table><thead><tr><th>School / AD</th><th>Email / phone</th><th>Plays us in</th><th>Outreach</th><th>Last contact</th><th>Thread</th><th>Notes</th></tr></thead><tbody>${rowsH||'<tr><td colspan="7" class="empty">No contacts match.</td></tr>'}</tbody></table></div>
+  <div class="grid"><section class="panel"><h3>Outreach by season<span>from AD Status</span></h3>${funnel||'<div class="empty">'+(S.loaded.ad?"No AD Status rows.":"Reading AD Status...")+'</div>'}</section>
+  <section class="panel"><h3>Recent messages<span>from Comms Log</span></h3><div class="list">${feed||'<div class="empty">'+(S.loaded.comms?"Comms Log is empty.":"Reading Comms Log...")+'</div>'}</div></section></div>`;
+}
+
+function viewStrategy(){
+  const wait=loadingOrNull(["games"]);
+  if(wait)return head("Season strategy","Plan each sport from what the schedule actually shows.")+wait;
+  const sp=sports();if(!sp.length)return head("Season strategy","")+'<div class="empty">No sports found in the Games tab.</div>';
+  if(!S.f.strat||!sp.includes(S.f.strat))S.f.strat=sp[0];
+  const sport=S.f.strat,gs=S.games.filter(g=>g.sport===sport).sort(sortG);
+  const doc=S.strat[slug(sport)]||{};
+  const by=(fn)=>{const m={};gs.forEach(g=>{const k=fn(g)||"Blank";m[k]=(m[k]||0)+1;});return m;};
+  const st=by(g=>g.status),mon={};gs.forEach(g=>{if(g.d!=null){const d=dd(g.d);const k=d.getUTCFullYear()+"-"+String(d.getUTCMonth()+1).padStart(2,"0");mon[k]=(mon[k]||0)+1;}});
+  const monMax=Math.max(1,...Object.values(mon));
+  const opp={};gs.forEach(g=>{if(g.opp&&!/tournament|classic|showdown/i.test(g.opp)){opp[g.opp]=(opp[g.opp]||0)+1;}});
+  const topOpp=Object.entries(opp).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const confirmed=gs.filter(g=>String(g.status).toLowerCase().startsWith("confirm"));
+  const gaps=[["No start time",gs.filter(g=>!String(g.time).trim()).length],["No location",gs.filter(g=>!String(g.loc).trim()).length],["Not on BAND",gs.filter(g=>String(g.band).toLowerCase()==="no").length],["Not on MaxPreps",gs.filter(g=>String(g.mp).toLowerCase()==="no").length],["Not confirmed",gs.length-confirmed.length]];
+  const homes=gs.filter(g=>/^home/i.test(g.ha)).length,aways=gs.filter(g=>/^away/i.test(g.ha)).length;
+  const target=doc.target!=null&&doc.target!==""?+doc.target:null;
+  const w=S.canWrite===false||!S.dbOk?" disabled":"";
+  const fld=(k,l,ph)=>`<label>${l}<textarea data-sf="${k}" id="sf-${k}" placeholder="${esc(ph)}"${w}>${esc(doc[k]||"")}</textarea></label>`;
+  return head("Season strategy","Numbers come from the Games tab. Your plan notes are saved to this page.")+
+  `<div class="tabs" role="tablist">${sp.map(x=>`<button role="tab" class="${x===sport?"on":""}" data-act="strat" data-sport="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+  <div class="two"><section class="panel"><h3>${esc(sport)} plan<span id="savemsg">${esc(S.saveMsg)}</span></h3>
+    ${S.dbOk?"":'<div class="banner info" style="margin-bottom:12px">Saving plan notes is not available in this view. The numbers still work.</div>'}
+    <div class="fields">
+      <label>Target games<input type="number" min="0" data-sf="target" id="sf-target" value="${esc(doc.target==null?"":doc.target)}"${w}><span class="dim" style="font-weight:400">${target!=null?`${gs.length} on the schedule, ${Math.max(0,target-gs.length)} to find, ${confirmed.length} confirmed.`:`${gs.length} on the schedule, ${confirmed.length} confirmed.`}</span></label>
+      ${fld("goals","Season goals","Record or development goals, roster size, culture")}
+      ${fld("tournaments","Tournaments and key dates","Preseason, end of season, deadlines")}
+      ${fld("facilities","Gyms, fields and officials","Venues, fees, who books refs")}
+      ${fld("outreach","Opponent outreach plan","Who to contact, by when, dates to offer")}
+      ${fld("risks","Risks and open decisions","Holds, conflicts, things you have to decide")}
+    </div></section>
+    <aside style="display:flex;flex-direction:column;gap:16px;min-width:0">
+      <section class="panel"><h3>${esc(sport)} at a glance<span>${gs.length} games</span></h3>
+        <div class="stack">${Object.entries(st).map(([k,n])=>`<i style="width:${n/gs.length*100}%;background:${stCls(k)==="ok"?"var(--ok)":stCls(k)==="warn"?"var(--warn)":stCls(k)==="bad"?"var(--bad)":stCls(k)==="info"?"var(--cyan-fill)":"var(--line)"}" title="${esc(k)}: ${n}"></i>`).join("")}</div>
+        <div class="legend">${Object.entries(st).map(([k,n])=>`<span style="--c:${stCls(k)==="ok"?"var(--ok)":stCls(k)==="warn"?"var(--warn)":stCls(k)==="bad"?"var(--bad)":stCls(k)==="info"?"var(--cyan-fill)":"var(--line)"}">${esc(k)} ${n}</span>`).join("")}</div>
+        <p style="margin:10px 0 0">Home ${homes}, away ${aways}, other ${gs.length-homes-aways}.</p></section>
+      <section class="panel"><h3>Games by month</h3><div class="bars">${Object.keys(mon).sort().map(k=>`<div class="bar m"><span>${MON[+k.slice(5)-1]} ${k.slice(2,4)}</span><i style="width:${mon[k]/monMax*100}%"></i><b>${mon[k]}</b></div>`).join("")||'<div class="empty">No dated games.</div>'}</div></section>
+      <section class="panel"><h3>Gaps to close</h3><div class="list">${gaps.map(x=>`<div class="row" style="grid-template-columns:1fr auto"><div>${x[0]}</div><div>${x[1]?pill(String(x[1]),"warn"):pill("0","ok")}</div></div>`).join("")}</div></section>
+      <section class="panel"><h3>Most-played opponents</h3><div class="list">${topOpp.map(([k,n])=>`<div class="row" style="grid-template-columns:1fr auto"><div>${esc(k)}</div><div class="num dim">${n} games</div></div>`).join("")||'<div class="empty">No opponents named yet.</div>'}</div></section>
+    </aside></div>`;
+}
+
+
+const FX_DEC=["","Confirmed","Tentative","Ignore","Cancelled","Postponed","Needs follow-up"];
+const FX_WRITE_STATUS={confirmed:"Confirmed",tentative:"Tentative",cancelled:"Cancelled",postponed:"Postponed"};
+function fkey(f){return "f"+slug([f.n,f.check,f.gid||f.sport,f.date].join("-")).slice(0,120);}
+function fixState(f,e){
+  const sheetDec=String(f.decision||"").trim();
+  const dec=(e.decision!==undefined?e.decision:sheetDec).trim();
+  let st="open";
+  if(e.verified)st="verified";else if(e.applied)st="applied";
+  else if(dec.toLowerCase()==="ignore")st="ignored";
+  else if(f.custom){st=dec?"done":"open";}
+  else if(sheetDec&&e.decision===undefined)st="sheet";
+  else if(dec)st="saved";
+  return {st,dec,resolved:["verified","ignored","sheet","done"].includes(st)};
+}
+function fixList(){
+  const out=S.fix.map(f=>{const key=fkey(f),e=S.fixes[key]||{};return Object.assign({},f,{key,e},fixState(f,e));});
+  Object.keys(S.fixes).forEach(k=>{const v=S.fixes[k];if(v&&v.custom){const f={key:k,custom:true,n:"+",sev:v.sev||"MED",check:"MANUAL",sport:v.sport||"",level:v.level||"",date:v.date||"",gid:v.gid||"",wrong:v.wrong||"",tracker:"",band:"",mp:"",decision:v.decision||""};out.push(Object.assign(f,{e:v},fixState(f,v)));}});
+  return out;
+}
+const FX_PILL={open:["Open","warn"],saved:["Saved, not applied","info"],applied:["Applied, waiting for a scrub","info"],verified:["Verified","ok"],ignored:["Ignored","na"],sheet:["Decided in the sheet","ok"],done:["Done","ok"]};
+function t24(v){
+  const m=String(v||"").trim().toLowerCase().replace(/\./g,"").match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm|a|p)?$/);
+  if(!m)return null;let h=+m[1];const mi=m[2]?+m[2]:0;const ap=m[3];
+  if(ap){if(h<1||h>12)return null;if(ap[0]==="p"&&h<12)h+=12;if(ap[0]==="a"&&h===12)h=0;}
+  if(h>23||mi>59)return null;
+  return String(h).padStart(2,"0")+":"+String(mi).padStart(2,"0");
+}
+function normHA(v){const x=String(v||"").trim().toLowerCase();return x==="home"?"Home":x==="away"?"Away":x==="neutral"?"Neutral":"";}
+function fxPlan(f,vals){
+  if(!f.gid)return {err:"This fix has no Game ID, so the page cannot find the Games row."};
+  const g=S.games.find(x=>x.id===f.gid);
+  if(!g)return {err:"No Games row has ID "+f.gid+"."};
+  const ch=[];const want={};
+  if(vals.time){const t=t24(vals.time);if(!t)return {err:"Could not read the time \""+vals.time+"\". Use 5:00 PM or 17:00."};ch.push({col:"G",label:"start time",val:"'"+t,show:t});want.time=t;}
+  const ha=normHA(vals.ha);if(ha){ch.push({col:"I",label:"home or away",val:ha,show:ha});want.ha=ha;}
+  if(vals.opp){ch.push({col:"H",label:"opponent",val:vals.opp,show:vals.opp});want.opp=vals.opp;}
+  const st=FX_WRITE_STATUS[String(vals.decision||"").toLowerCase()];if(st){ch.push({col:"K",label:"status",val:st,show:st});want.status=st;}
+  if(!ch.length)return {err:"Nothing to write. Enter a time, home or away, an opponent, or a Confirmed, Tentative, Cancelled or Postponed decision."};
+  return {g,ch,want,sum:"Games row "+g.row+" ("+g.id+"): "+ch.map(c=>c.label+" = "+c.show).join(", ")};
+}
+function fxCheck(g,want){
+  const bad=[];
+  if(want.time&&t24(g.time)!==want.time)bad.push("start time is "+(g.time||"blank"));
+  if(want.ha&&normHA(g.ha)!==want.ha)bad.push("home or away is "+(g.ha||"blank"));
+  if(want.opp&&norm(g.opp)!==norm(want.opp))bad.push("opponent is "+(g.opp||"blank"));
+  if(want.status&&String(g.status||"").trim().toLowerCase()!==want.status.toLowerCase())bad.push("status is "+(g.status||"blank"));
+  return bad;
+}
+function viewFixes(){
+  const wait=loadingOrNull(["fix"]);
+  const f=S.f,w=S.canWrite===false||!S.dbOk?" disabled":"";
+  const all=fixList();
+  const open=all.filter(x=>!x.resolved).length;
+  let list=all.filter(x=>(f.fxshow==="All"||(f.fxshow==="Open"?!x.resolved:x.resolved))&&(f.fxsev==="All"||String(x.sev).toUpperCase()===f.fxsev)&&(f.fxsport==="All"||x.sport===f.fxsport));
+  const rank=s=>/high/i.test(s)?0:/med/i.test(s)?1:2;
+  list.sort((a,b)=>rank(a.sev)-rank(b.sev)||String(a.date).localeCompare(String(b.date)));
+  const decOpts=cur=>(FX_DEC.includes(cur)?FX_DEC:[...FX_DEC,cur]).map(o=>`<option${o===cur?" selected":""}>${esc(o)}</option>`).join("");
+  const haOpts=cur=>["","Home","Away","Neutral"].map(o=>`<option${o.toLowerCase()===String(cur||"").toLowerCase()?" selected":""}>${esc(o)}</option>`).join("");
+  const card=x=>{
+    const e=x.e||{},time=e.time!==undefined?e.time:(x.time||""),ha=e.ha!==undefined?e.ha:(x.ha||""),opp=e.opp!==undefined?e.opp:(x.opp||""),dec=x.dec;
+    const sv=S.scrub&&S.scrub.verify&&S.scrub.verify[x.key];
+    const msg=S.fxMsg[x.key]||(x.st==="verified"?"Verified "+(e.verifiedAt?new Date(e.verifiedAt).toLocaleDateString([],{month:"short",day:"numeric"}):""):x.st==="applied"?"Written "+(e.appliedAt?new Date(e.appliedAt).toLocaleString([],{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"")+". Run Refresh scrub to confirm.":e.updated?"Saved":"");
+    const src=[x.tracker?"Tracker: "+x.tracker:"",x.band?"BAND: "+x.band:"",x.mp?"MaxPreps: "+x.mp:""].filter(Boolean).map(t=>`<div class="fxsrc">${esc(t)}</div>`).join("");
+    const canApply=!x.custom&&x.gid;
+    const armed=S.armed&&S.armed.key===x.key;
+    const ap=canApply?`<button class="btn sm${armed?" pri":""}" data-act="fxapply" data-key="${esc(x.key)}"${w} title="Writes the entered values to the Games tab and Fix Queue row ${x.row}, then a scrub checks them">${armed?"Confirm: "+esc(S.armed.sum):"Apply to Games tab"}</button>`:"";
+    const pl=FX_PILL[x.st]||FX_PILL.open;
+    return `<div class="card fixcard${/high/i.test(x.sev)?" hi":""}${x.resolved?" done":""}" data-key="${esc(x.key)}">
+      <div class="m"><span>${pill(x.sev||"LOW",/high/i.test(x.sev)?"bad":/med/i.test(x.sev)?"warn":"na")}</span><span>${esc(x.check)}</span><span>${esc(x.sport)} ${esc(x.level)}</span><span class="num">${esc(x.date)}</span>${x.gid?`<span>${esc(x.gid)}</span>`:""}<span>${pill(pl[0],pl[1])}</span></div>
+      <div class="tt">${esc(x.wrong)}</div>${src}
+      <div class="fxgrid">
+        <label>Final start time<input type="text" data-fx="time" value="${esc(time)}" placeholder="5:00 PM"${w}></label>
+        <label>Final home / away<select data-fx="ha"${w}>${haOpts(ha)}</select></label>
+        <label>Final opponent<input type="text" data-fx="opp" value="${esc(opp)}" placeholder="Opponent"${w}></label>
+        <label>Decision / status<select data-fx="decision"${w}>${decOpts(dec)}</select></label>
+        <label class="wide">Note<input type="text" data-fx="note" value="${esc(e.note||"")}" placeholder="Optional"${w}></label>
+      </div>
+      <div class="a"><button class="btn sm${canApply?"":" pri"}" data-act="fxsave" data-key="${esc(x.key)}"${w}>Save</button>${ap}${x.custom||x.st!=="open"?`<button class="btn sm ghost" data-act="${x.custom?"fxdel":"fxclear"}" data-key="${esc(x.key)}"${w}>${x.custom?"Remove":"Reopen"}</button>`:""}</div>
+      <div class="dim" style="font-size:13px" id="fxm-${esc(x.key)}">${esc(msg)}</div>
+      ${sv&&sv.length?`<div style="font-size:13px;color:var(--warn)">Still not matching on the Games tab: ${esc(sv.join(", "))}.</div>`:""}</div>`;};
+  return head("Fixes","Enter the final time, home or away, opponent and decision. Apply writes it to the Games tab, and the next scrub confirms it.",`<div class="filters">${sel("fxshow","Show",["Open","Done","All"],f.fxshow)}${sel("fxsev","Severity",["All","HIGH","MED","LOW"],f.fxsev)}${sel("fxsport","Sport",["All",...uniq(all.map(x=>x.sport)).sort()],f.fxsport)}</div>`)+
+  (S.dbOk?"":'<div class="banner info">Saving fixes needs page storage, which is not available in this view.</div>')+
+  `<div class="strip"><div><b>${open}</b><em>Open fixes</em></div><div><b>${all.filter(x=>x.st==="applied").length}</b><em>Applied, not yet verified</em></div><div><b>${all.filter(x=>x.st==="verified").length}</b><em>Verified by a scrub</em></div></div>
+  <section class="panel"><h3>Add a fix that is not in the queue</h3>
+    <form id="fxnew" class="filters" autocomplete="off">
+      <label>Sport<select id="fn-sport"${w}>${["",...sports()].map(o=>`<option>${esc(o)}</option>`).join("")}</select></label>
+      <label>Date<input type="date" id="fn-date"${w}></label>
+      <label>Game ID<input type="text" id="fn-gid" placeholder="BBK-26-010"${w}></label>
+      <label style="flex:2 1 260px">What is wrong<input type="text" id="fn-wrong" required placeholder="Start time should be 6:15 PM"${w}></label>
+      <button class="btn pri" type="submit"${w}>Add fix</button>
+    </form></section>
+  ${wait&&!all.length?wait:`<div class="board" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">${list.map(card).join("")||'<div class="empty">Nothing to show with these filters.</div>'}</div>`}`;
+}
+
+function viewTasks(){
+  const f=S.f,t=todayU();
+  const ts=S.tasks.filter(x=>f.tsport==="All"||x.sport===f.tsport);
+  const cols=[["todo","To do"],["doing","In progress"],["done","Done"]];
+  const w=S.canWrite===false||!S.dbOk?" disabled":"";
+  const sportOpts=["All sports",...sports()];
+  const upG=uniq(S.games.filter(g=>upcoming(g)&&g.d!=null).sort(sortG).map(g=>iso(g.d))).slice(0,14);
+  const card=x=>{const u=isoToU(x.due);const over=x.status!=="done"&&u!=null&&u<t;
+    const acts=x.status==="todo"?`<button class="btn sm" data-act="mv" data-id="${esc(x.id)}" data-to="doing"${w}>Start</button><button class="btn sm" data-act="mv" data-id="${esc(x.id)}" data-to="done"${w}>Done</button>`:
+      x.status==="doing"?`<button class="btn sm" data-act="mv" data-id="${esc(x.id)}" data-to="todo"${w}>Back</button><button class="btn sm" data-act="mv" data-id="${esc(x.id)}" data-to="done"${w}>Done</button>`:
+      `<button class="btn sm" data-act="mv" data-id="${esc(x.id)}" data-to="todo"${w}>Reopen</button>`;
+    const rm=S.open["rm"+x.id]?`<button class="btn sm" data-act="rm" data-id="${esc(x.id)}" style="border-color:var(--bad);color:var(--bad)"${w}>Confirm remove</button>`:`<button class="btn sm ghost" data-act="rmask" data-id="${esc(x.id)}"${w}>Remove</button>`;
+    return `<div class="card${x.priority==="high"?" hi":""}${over?" over":""}"><div class="tt">${esc(x.title)}</div>
+      <div class="m"><span>${esc(x.sport||"All sports")}</span>${u!=null?`<span>${over?"Overdue, ":"Due "}${esc(fmtD(u))}</span>`:""}${x.priority==="high"?"<span><b>High</b></span>":""}</div>
+      ${x.notes?`<div class="m">${esc(x.notes)}</div>`:""}<div class="a">${acts}${rm}</div></div>`;};
+  return head("Tasks","AD to-dos by sport. Everyone with edit access sees the same board.",`<div class="filters">${sel("tsport","Show",["All",...uniq([...sports(),...S.tasks.map(x=>x.sport).filter(Boolean)]).sort()],f.tsport)}</div>`)+
+  (S.dbOk?"":'<div class="banner info">The task board needs page storage, which is not available in this view.</div>')+
+  `<section class="panel"><h3>Add a task</h3>
+    <form id="tform" class="filters" autocomplete="off">
+      <label style="flex:2 1 260px">Task<input type="text" id="t-title" required placeholder="Confirm 15 Jan start times with Grovemont"${w}></label>
+      <label>Sport<select id="t-sport"${w}>${sportOpts.map(o=>`<option>${esc(o)}</option>`).join("")}</select></label>
+      <label>Due<input type="date" id="t-due"${w}></label>
+      <label>Priority<select id="t-pri"${w}><option>normal</option><option>high</option></select></label>
+      <label style="flex:2 1 220px">Note<input type="text" id="t-notes" placeholder="Optional"${w}></label>
+      <button class="btn pri" type="submit"${w}>Add</button>
+    </form>
+    <div class="filters" style="margin-top:12px"><label>Game-week checklist for
+      <select data-f="weekGame">${["",...upG].map(o=>`<option value="${esc(o)}"${o===f.weekGame?" selected":""}>${o?esc(fmtD(isoToU(o),true)):"Pick a game date"}</option>`).join("")}</select></label>
+      <button class="btn" data-act="weekpack"${w}${f.weekGame?"":" disabled"}>Add 4 tasks</button>
+      <span class="dim" style="font-size:13px;padding-bottom:7px">Confirm in BAND a week out, check officials, review the post draft, enter results.</span></div></section>
+  <div class="board">${cols.map(([k,l])=>{const arr=ts.filter(x=>x.status===k).sort((a,b)=>(isoToU(a.due)??9e15)-(isoToU(b.due)??9e15));return `<div class="col"><h3>${l}<span>${arr.length}</span></h3>${arr.map(card).join("")||'<div class="empty">Nothing here.</div>'}</div>`;}).join("")}</div>`;
+}
+
+function viewBudget(){
+  const wait=loadingOrNull(["games"]);
+  if(wait)return head("Budget","Officials cost from the Games tab.")+wait;
+  const by={};
+  S.games.forEach(g=>{const k=g.sport||"Blank";const o=by[k]||(by[k]={n:0,withCost:0,total:0,missing:0,months:{}});o.n++;const c=num(g.ref);
+    if(c!=null){o.withCost++;o.total+=c;if(g.d!=null){const d=dd(g.d);const mk=d.getUTCFullYear()+"-"+String(d.getUTCMonth()+1).padStart(2,"0");o.months[mk]=(o.months[mk]||0)+c;}}
+    else if(String(g.status).toLowerCase().startsWith("confirm")&&/^home/i.test(g.ha))o.missing++;});
+  const total=Object.values(by).reduce((s,o)=>s+o.total,0);
+  const months={};Object.values(by).forEach(o=>Object.entries(o.months).forEach(([k,v])=>{months[k]=(months[k]||0)+v;}));
+  const mMax=Math.max(1,...Object.values(months));
+  return head("Budget","Ref costs entered in the Games tab. Facility fees and travel are not in the sheet yet.")+
+  `<div class="strip"><div><b>${money(total)}</b><em>Ref cost entered</em></div><div><b>${Object.values(by).reduce((s,o)=>s+o.withCost,0)}</b><em>Games with a cost</em></div><div><b>${Object.values(by).reduce((s,o)=>s+o.missing,0)}</b><em>Confirmed home games, no cost</em></div></div>
+  <div class="two"><div class="tbl-box"><table style="min-width:520px"><thead><tr><th>Sport</th><th>Games</th><th>With cost</th><th>Total</th><th>Average</th><th>Home, confirmed, no cost</th></tr></thead><tbody>${Object.entries(by).sort().map(([k,o])=>`<tr><td><b>${esc(k)}</b></td><td class="num">${o.n}</td><td class="num">${o.withCost}</td><td class="num">${money(o.total)}</td><td class="num">${o.withCost?money(o.total/o.withCost):'<span class="dim">none</span>'}</td><td class="num">${o.missing?pill(String(o.missing),"warn"):pill("0","ok")}</td></tr>`).join("")}</tbody></table></div>
+  <section class="panel"><h3>Cost by month</h3><div class="bars">${Object.keys(months).sort().map(k=>`<div class="bar m"><span>${MON[+k.slice(5)-1]} ${k.slice(2,4)}</span><i style="width:${months[k]/mMax*100}%"></i><b style="width:auto">${money(months[k])}</b></div>`).join("")||'<div class="empty">No costs are entered yet. Put them in the Ref cost column and they show up here.</div>'}</div></section></div>`;
+}
+
+/* ---------- render ---------- */
+function curView(){const h=(location.hash||"").replace("#","");return VIEWS.some(v=>v[0]===h)?h:"briefing";}
+function render(){
+  const v=curView();
+  $("nav").innerHTML=VIEWS.map(x=>`<a href="#${x[0]}" class="${x[0]===v?"on":""}"${x[0]===v?' aria-current="page"':""}>${x[1]}</a>`).join("");
+  const fn={briefing:viewBriefing,schedule:viewSchedule,contacts:viewContacts,fixes:viewFixes,strategy:viewStrategy,tasks:viewTasks,budget:viewBudget}[v];
+  let html="";try{html=fn();}catch(e){html=`<div class="banner bad">This section hit an error: ${esc(e.message)}</div>`;}
+  $("main").innerHTML=html;
+  renderBanners();
+  const ts=Math.max(0,...Object.values(S.stored));
+  $("sync").firstChild&&($("sync").firstChild.textContent=ts?"Sheet read "+new Date(ts).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"}):(S.mcpNull?"No sheet access":"Reading the sheet..."));
+  S.dirty=false;
+}
+function softRender(){
+  const a=document.activeElement;
+  if(a&&(a.tagName==="TEXTAREA"||a.tagName==="INPUT"&&a.id&&a.id.startsWith("sf-")||a.id==="t-title"||a.id==="t-notes"||(a.closest&&a.closest(".fixcard,#fxnew")))){S.dirty=true;return;}
+  render();
+}
+function renderBanners(){
+  const codes=uniq(Object.values(S.err));let h="";
+  if(S.mcpNull)h+=`<div class="banner bad" style="margin-top:14px">The app could not reach the tracker Sheet. Check your connection and sign in again.</div>`;
+  codes.forEach(c=>{
+    const m={server_not_connected:"Could not reach Google Sheets. Check your connection and try again.",
+      needs_reauth:"Your Google sign-in expired. Sign out and sign in again.",
+      not_in_manifest:"Google did not allow access to the tracker Sheet. Ask Brett to share it with your account.",
+      consent_required:"Google did not allow access to the tracker Sheet. Ask Brett to share it with your account.",
+      blocked_by_policy:"Your organization blocks this connector for the page.",
+      selection_required:"You have more than one Google Sheets connector. Choose one when the page asks.",
+      approval_required:"The sheet read needs your approval."}[c]||(["server_unavailable","upstream_error","rate_limited"].includes(c)?"Google Sheets did not answer. The page keeps the last data and tries again on the next refresh.":"The sheet read failed ("+c+").");
+    h+=`<div class="banner ${["server_unavailable","upstream_error","rate_limited"].includes(c)?"":"bad"}" style="margin-top:14px"><span>${esc(m)}</span>${c==="approval_required"?'<button class="btn pri sm" data-act="allow">Allow and load</button>':""}</div>`;
+  });
+  $("banners").innerHTML=h;
+}
+
+/* ---------- db ---------- */
+let db=null;
+function saveStrat(){
+  if(!db||!S.dbOk||S.canWrite===false)return;
+  const id=slug(S.f.strat);const cur=Object.assign({},S.strat[id]||{});
+  document.querySelectorAll("[data-sf]").forEach(el=>{cur[el.dataset.sf]=el.type==="number"?(el.value===""?null:+el.value):el.value;});
+  cur.sport=S.f.strat;cur.updated=Date.now();
+  S.strat[id]=cur;S.saveMsg="Saving...";const m=$("savemsg");if(m)m.textContent=S.saveMsg;
+  db.doc("strategy/"+id).set(cur).then(()=>{S.saveMsg="Saved";const m2=$("savemsg");if(m2)m2.textContent="Saved";}).catch(e=>{S.saveMsg="Not saved ("+(e.code||"error")+")";if(e.code==="invalid_argument")S.canWrite=false;const m3=$("savemsg");if(m3)m3.textContent=S.saveMsg;});
+}
+
+function fxRead(card){const o={};card.querySelectorAll("[data-fx]").forEach(i=>{o[i.dataset.fx]=i.value.trim();});return o;}
+function fxMsg(k,t){S.fxMsg[k]=t;const m=document.getElementById("fxm-"+k);if(m)m.textContent=t;}
+function fxSave(k,btn){
+  const card=btn.closest(".fixcard");if(!card||!db)return Promise.resolve(null);
+  const cur=Object.assign({},S.fixes[k]||{},fxRead(card),{updated:Date.now(),sport:((fixList().find(x=>x.key===k)||{}).sport)||(S.fixes[k]||{}).sport||""});
+  S.fixes[k]=cur;fxMsg(k,"Saving...");
+  return db.doc("fixes/"+k).set(cur).then(()=>{fxMsg(k,"Saved");return cur;}).catch(e=>{if(e.code==="invalid_argument")S.canWrite=false;fxMsg(k,"Not saved: "+(e.code==="not_your_sport"||e.code==="read_only"?e.message:(e.code||"error")));return null;});
+}
+async function fxApply(k,btn){
+  if(!S.mcp||!db){fxMsg(k,"No sheet access from this view");return;}
+  const f=fixList().find(x=>x.key===k);if(!f)return;
+  const card=btn.closest(".fixcard");const vals=fxRead(card);
+  const plan=fxPlan(f,vals);
+  if(plan.err){S.armed=null;fxMsg(k,plan.err);btn.textContent="Apply to Games tab";btn.classList.remove("pri");return;}
+  if(!S.armed||S.armed.key!==k||S.armed.sum!==plan.sum){S.armed={key:k,sum:plan.sum};btn.textContent="Confirm: "+plan.sum;btn.classList.add("pri");fxMsg(k,"Click the button again to write this to your Games tab. Reload the page to cancel.");return;}
+  S.armed=null;btn.disabled=true;
+  const saved=await fxSave(k,btn);if(!saved){btn.disabled=false;return;}
+  fxMsg(k,"Writing to the Games tab...");
+  try{
+    for(const c of plan.ch){await S.mcp.callTool(SERVER,"update_values",{spreadsheetId:SHEET,range:"Games!"+c.col+plan.g.row,values:[[c.val]]});}
+    try{await S.mcp.callTool(SERVER,"update_values",{spreadsheetId:SHEET,range:"'Fix Queue'!L"+f.row+":O"+f.row,values:[[vals.time||"",vals.ha||"",vals.opp||"",vals.decision||""]]});}catch(e2){}
+    const done=Object.assign({},saved,{applied:true,appliedAt:Date.now(),want:plan.want,gid:f.gid,verified:false,verifiedAt:null});
+    S.fixes[k]=done;await db.doc("fixes/"+k).set(done).catch(()=>{});
+    fxMsg(k,"Written to Games row "+plan.g.row+". Checking it now...");
+    runScrub({quick:true});
+  }catch(e){
+    const c=(e&&e.code)||"error";
+    fxMsg(k,c==="approval_required"||c==="consent_required"||c==="not_in_manifest"?"The sheet write was not allowed. Reload the page and choose Allow. Your fix is saved here.":"Not written to the Games tab ("+c+"). Your fix is saved here. Anything already written is listed in the scrub.");
+  }
+  btn.disabled=false;
+}
+
+/* ---------- scrub ---------- */
+const PLATFORMS=["BAND","MaxPreps","DragonFly","GameChanger"];
+const SRC_NAMES={games:"Games tab",contacts:"Contacts tab",comms:"Comms Log tab",ad:"AD Status tab",fix:"Fix Queue tab"};
+function tm(ts){return ts?new Date(ts).toLocaleTimeString([],{hour:"numeric",minute:"2-digit",second:"2-digit"}):"";}
+function rowCount(k){return {games:S.games,contacts:S.contacts,comms:S.comms,ad:S.ad,fix:S.fix}[k].length;}
+function renderScrub(){
+  const w=$("scrubwrap");if(!w)return;
+  const sc=S.scrub;if(!sc){w.innerHTML="";return;}
+  const st={wait:["Waiting","na"],run:["Checking...","info"],ok:["Checked","ok"],warn:["Checked, see note","warn"],err:["Failed","bad"],manual:["Needs Claude","na"],skip:["Skipped","na"]};
+  const row=(name,it)=>{const s=st[it.state]||st.wait;return `<div class="srow"><b>${esc(name)}</b><span>${pill(s[0],s[1])}</span><span class="tm num dim">${esc(tm(it.at))}</span><span class="dt">${it.html||esc(it.detail||"")}</span></div>`;};
+  const plat=PLATFORMS.map(p=>{
+    const r=S.scrubreq[p]||{};let d,state="manual";
+    if(r.status==="requested"){d=`Requested ${esc(new Date(r.requestedAt).toLocaleString([],{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}))}. Open a chat with Claude to run it.`;}
+    else if(r.status==="done"){state="ok";d=`Checked by Claude ${esc(r.checkedAt?new Date(r.checkedAt).toLocaleDateString([],{month:"short",day:"numeric"}):"")}${r.summary?": "+esc(r.summary):""}`;}
+    else d="Not scrubbed from this page. BAND, MaxPreps, DragonFly and GameChanger need a login that only Claude's browser has.";
+    const btn=S.dbOk&&S.canWrite!==false&&r.status!=="requested"?` <button class="btn sm" data-act="req" data-p="${esc(p)}">Request scrub</button>`:"";
+    return `<div class="srow"><b>${esc(p)}</b><span>${pill(state==="ok"?"Last scrub on file":r.status==="requested"?"Requested":"Not automatic",state==="ok"?"ok":r.status==="requested"?"info":"na")}</span><span class="tm num dim">${esc(r.checkedAt?tm(r.checkedAt):"")}</span><span class="dt">${d}${btn}</span></div>`;}).join("");
+  const done=!sc.running&&sc.finishedAt;
+  w.innerHTML=`<section class="scrub"><h3>Scrub<span>${sc.running?"Running since "+esc(tm(sc.startedAt)):done?"Finished "+esc(tm(sc.finishedAt)):""} <button class="btn sm ghost" data-act="scrubhide">Hide</button></span></h3>
+    ${Object.keys(SRC_NAMES).map(k=>row(SRC_NAMES[k],sc.items[k]||{state:"wait"})).join("")}
+    ${row("Fix confirmation",sc.items.verify||{state:"wait"})}
+    ${row("Gmail",sc.items.gmail||{state:"wait"})}
+    ${plat}</section>`;
+}
+async function runScrub(opt){
+  opt=opt||{};
+  if(!S.mcp){S.scrub={running:false,items:{}};renderScrub();return;}
+  if(S.scrub&&S.scrub.running)return;
+  const sc=S.scrub={running:true,startedAt:Date.now(),finishedAt:null,items:{},verify:{}};
+  Object.keys(SRC_NAMES).forEach(k=>sc.items[k]={state:"wait"});sc.items.verify={state:"wait"};sc.items.gmail={state:opt.quick?"skip":"wait",detail:opt.quick?"Not part of a quick check after a fix.":""};
+  const btn=$("scrubbtn");if(btn){btn.disabled=true;btn.textContent="Scrubbing...";}
+  renderScrub();
+  for(const k of Object.keys(SRC_NAMES)){
+    sc.items[k]={state:"run"};renderScrub();
+    try{const r=await S.mcp.callTool(SERVER,TOOL,{spreadsheetId:SHEET,range:SRC[k]});handler(k)({type:"data",result:r});
+      sc.items[k]={state:"ok",at:Date.now(),detail:rowCount(k)+" rows read"};}
+    catch(e){const c=(e&&e.code)||"error";handler(k)({type:"error",error:e});sc.items[k]={state:"err",at:Date.now(),detail:"Could not read ("+c+(e&&e.message?": "+String(e.message).slice(0,160):"")+")"+(c==="approval_required"?". Use Allow and load at the top, then run again.":"")};}
+    renderScrub();
+  }
+  // confirm applied fixes against the freshly read Games tab
+  sc.items.verify={state:"run"};renderScrub();
+  try{
+    if(sc.items.games.state!=="ok")throw new Error("The Games tab was not read.");
+    const pend=Object.entries(S.fixes).filter(([k,v])=>v&&v.applied&&!v.verified&&v.want);
+    let okN=0,badN=0;
+    for(const [k,v] of pend){
+      const g=S.games.find(x=>x.id===v.gid);
+      const bad=g?fxCheck(g,v.want):["no Games row has ID "+v.gid];
+      if(!bad.length){okN++;const nv=Object.assign({},v,{verified:true,verifiedAt:Date.now()});S.fixes[k]=nv;if(db)db.doc("fixes/"+k).set(nv).catch(()=>{});sc.verify[k]=[];}
+      else{badN++;sc.verify[k]=bad;}
+    }
+    sc.items.verify={state:badN?"warn":"ok",at:Date.now(),detail:pend.length?okN+" fix"+(okN===1?"":"es")+" confirmed on the Games tab"+(badN?", "+badN+" still not matching (see the Fixes page)":"."):"No applied fixes are waiting for confirmation."};
+  }catch(e){sc.items.verify={state:"err",at:Date.now(),detail:e.message};}
+  renderScrub();
+  if(!opt.quick)await gmailCheck(sc);
+  sc.running=false;sc.finishedAt=Date.now();
+  if(btn){btn.disabled=false;btn.textContent="Refresh scrub";}
+  renderScrub();render();
+}
+async function gmailCheck(sc){
+  sc.items.gmail={state:"run"};renderScrub();
+  try{
+    const r=await S.mcp.callTool("Gmail","search_threads",{query:"newer_than:14d -category:promotions -category:social",pageSize:50,view:"THREAD_VIEW_METADATA_ONLY"});
+    let p=r&&r.payload;if(typeof p==="string"){try{p=JSON.parse(p);}catch(e){p=null;}}
+    if(!p&&r&&r.content&&r.content[0]&&r.content[0].text){try{p=JSON.parse(r.content[0].text);}catch(e){p=null;}}
+    const threads=(p&&p.threads)||[];
+    const byEmail=new Map();
+    S.contacts.forEach(c=>{(String(c.email||"").match(/[\w.+-]+@[\w-]+(?:\.[\w-]+)+/g)||[]).forEach(e=>byEmail.set(e.toLowerCase(),c.school));});
+    const seen={};
+    threads.forEach(t=>(t.messages||[]).forEach(m=>{
+      const d=Date.parse(m.date);if(isNaN(d))return;
+      const sent=(m.labelIds||[]).includes("SENT");
+      const who=sent?[...(m.toRecipients||[]),...(m.ccRecipients||[])]:[m.sender];
+      who.forEach(a=>{const mm=String(a||"").toLowerCase().match(/[\w.+-]+@[\w-]+(?:\.[\w-]+)+/);const sch=mm&&byEmail.get(mm[0]);if(sch){const o=seen[sch]||(seen[sch]={out:0,inn:0});if(sent)o.out=Math.max(o.out,d);else o.inn=Math.max(o.inn,d);}});
+    }));
+    const idx=new Map(schoolIndex().map(s=>[s.school,s]));
+    const stale=[];
+    Object.entries(seen).forEach(([sch,o])=>{const g=Math.max(o.out,o.inn);const t=idx.get(sch);const gu=Date.UTC(new Date(g).getFullYear(),new Date(g).getMonth(),new Date(g).getDate());if(!t||t.last==null||gu>t.last)stale.push({sch,g:gu,trk:t&&t.last});});
+    stale.sort((a,b)=>b.g-a.g);
+    const nSch=Object.keys(seen).length;
+    const html=esc("Scanned "+threads.length+" threads from the last 14 days. "+nSch+" schools on file appear. ")+(stale.length?`<b>${stale.length} newer than the tracker:</b> `+esc(stale.slice(0,8).map(x=>x.sch+" (Gmail "+fmtD(x.g)+", tracker "+(x.trk?fmtD(x.trk):"none")+")").join("; ")+(stale.length>8?"; and "+(stale.length-8)+" more":"")):"The tracker's last-contact dates match.");
+    sc.items.gmail={state:stale.length?"warn":"ok",at:Date.now(),html};
+  }catch(e){const c=(e&&e.code)||"error";sc.items.gmail={state:"err",at:Date.now(),detail:c==="not_in_manifest"||c==="consent_required"?"The Gmail check is only available in Brett's Claude chat, not in this app.":c==="server_not_connected"?"The Gmail check is only available in Brett's Claude chat, not in this app.":"Could not check Gmail ("+c+(e&&e.message?": "+String(e.message).slice(0,160):"")+")."};}
+  renderScrub();
+}
+let stT=null;
+function newId(){return "t"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function putTask(t){return db.doc("tasks/"+t.id).set(t).catch(e=>{if(e.code==="invalid_argument"){S.canWrite=false;}S.saveMsg="Not saved ("+(e.code||"error")+")";softRender();});}
+
+/* ---------- events ---------- */
+document.addEventListener("click",ev=>{
+  const el=ev.target.closest("[data-act]");if(!el)return;
+  const a=el.dataset.act;
+  if(a==="toggle"){S.open[el.dataset.id]=!S.open[el.dataset.id];render();}
+  else if(a==="refresh"){S.mcp?S.mcp.invalidate().catch(()=>{}).then(()=>{}):location.reload();}
+  else if(a==="strat"){saveStrat();S.f.strat=el.dataset.sport;render();}
+  else if(a==="mv"&&db){const t=S.tasks.find(x=>x.id===el.dataset.id);if(t){const n=Object.assign({},t,{status:el.dataset.to});delete n.id;putTask(Object.assign({id:t.id},n));}}
+  else if(a==="rmask"){S.open["rm"+el.dataset.id]=true;render();}
+  else if(a==="rm"&&db){db.doc("tasks/"+el.dataset.id).delete().catch(()=>{});delete S.open["rm"+el.dataset.id];}
+  else if(a==="weekpack"&&db&&S.f.weekGame){
+    const u=isoToU(S.f.weekGame),ds=fmtD(u),on=S.games.filter(g=>g.d===u),sp=on.length&&uniq(on.map(g=>g.sport)).length===1?on[0].sport:"";
+    [["Confirm "+ds+" games in BAND",-7,"high"],["Check officials for "+ds,-5,"normal"],["Review Buffer post draft for "+ds,-1,"normal"],["Enter "+ds+" results (MaxPreps, BAND)",1,"normal"]].forEach(x=>putTask({id:newId(),title:x[0],sport:sp,due:iso(u+x[1]*DAY),status:"todo",priority:x[2],notes:"",created:Date.now()}));
+    S.f.weekGame="";render();
+  }
+  else if(a==="fxsave"&&db){fxSave(el.dataset.key,el);}
+  else if(a==="fxapply"){fxApply(el.dataset.key,el);}
+  else if(a==="scrub"){runScrub();}
+  else if(a==="scrubhide"){S.scrub=null;renderScrub();}
+  else if(a==="req"&&db){db.doc("scrubreq/"+el.dataset.p).set({status:"requested",requestedAt:Date.now(),platform:el.dataset.p}).catch(()=>{});}
+  else if(a==="fxclear"&&db){const k=el.dataset.key;const e=Object.assign({},S.fixes[k]||{},{decision:"",applied:false,verified:false,want:null,updated:Date.now()});db.doc("fixes/"+k).set(e).catch(()=>{});}
+  else if(a==="fxdel"&&db){db.doc("fixes/"+el.dataset.key).delete().catch(()=>{});}
+  else if(a==="copybrief"){copyBrief(el);}
+  else if(a==="allow"){allowAll();}
+});
+document.addEventListener("input",ev=>{
+  const el=ev.target;
+  if(el.dataset.sf!==undefined){clearTimeout(stT);stT=setTimeout(saveStrat,900);return;}
+  if(el.dataset.f&&el.type!=="checkbox"&&el.tagName!=="SELECT"){S.f[el.dataset.f]=el.value;const id=el.id,pos=el.selectionStart;render();const n=id&&$(id);if(n){n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}}}
+});
+document.addEventListener("change",ev=>{
+  const el=ev.target;
+  if(el.dataset.sf!==undefined){clearTimeout(stT);saveStrat();return;}
+  if(el.dataset.f){S.f[el.dataset.f]=el.type==="checkbox"?el.checked:el.value;render();}
+});
+document.addEventListener("focusout",()=>{if(S.dirty)setTimeout(()=>{const a=document.activeElement;if(!(a&&a.matches&&a.matches("textarea,input")))render();},50);});
+document.addEventListener("submit",ev=>{
+  if(ev.target.id==="fxnew"){ev.preventDefault();if(!db)return;const wrong=$("fn-wrong").value.trim();if(!wrong)return;
+    const id="c"+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+    db.doc("fixes/"+id).set({custom:true,sev:"MED",sport:$("fn-sport").value,date:$("fn-date").value,gid:$("fn-gid").value.trim(),wrong,decision:"",created:Date.now(),updated:Date.now()}).catch(()=>{});
+    ev.target.reset();return;}
+  if(ev.target.id!=="tform")return;ev.preventDefault();
+  if(!db)return;
+  const title=$("t-title").value.trim();if(!title)return;
+  const sp=$("t-sport").value;
+  putTask({id:newId(),title,sport:sp==="All sports"?"":sp,due:$("t-due").value||"",status:"todo",priority:$("t-pri").value,notes:$("t-notes").value.trim(),created:Date.now()});
+  ev.target.reset();
+});
+window.addEventListener("hashchange",()=>{render();window.scrollTo(0,0);});
+
+function copyBrief(btn){
+  const t=todayU(),up=S.games.filter(upcoming).sort(sortG);
+  const next=up.filter(g=>g.d-t<=14*DAY).slice(0,10);
+  const un=up.filter(g=>!/^confirm/i.test(g.status)&&g.d-t<=75*DAY).slice(0,10);
+  const wait=schoolIndex().filter(s=>s.waiting).sort((a,b)=>b.waitDays-a.waitDays).slice(0,8);
+  const due=S.tasks.filter(x=>x.status!=="done"&&isoToU(x.due)!=null&&isoToU(x.due)-t<=7*DAY).sort((a,b)=>isoToU(a.due)-isoToU(b.due));
+  const L=["AD briefing, "+fmtD(t,true),"","Next 14 days:"];
+  (next.length?next:[null]).forEach(g=>L.push(g?"-"+fmtD(g.d,true)+" "+fmtT(g.time)+", "+g.sport+" "+g.level+" vs "+g.opp+" ("+g.ha+", "+g.status+")":"-Nothing on the schedule"));
+  L.push("","Not confirmed yet:");(un.length?un:[null]).forEach(g=>L.push(g?"-"+fmtD(g.d)+" "+g.sport+" "+g.level+" "+g.opp+" ("+g.status+")":"-Nothing"));
+  L.push("","Waiting on replies:");(wait.length?wait:[null]).forEach(s=>L.push(s?"-"+s.school+", "+s.waitDays+" days":"-None"));
+  L.push("","Tasks due in 7 days:");(due.length?due:[null]).forEach(x=>L.push(x?"-"+fmtD(isoToU(x.due))+" "+x.title:"-None"));
+  const txt=L.join("\n");
+  const done=ok=>{btn.textContent=ok?"Copied":"Select and copy below";if(!ok){const pre=document.createElement("textarea");pre.value=txt;pre.style.cssText="width:100%;height:220px;margin-top:10px";btn.parentNode.appendChild(pre);pre.select();}setTimeout(()=>{btn.textContent="Copy briefing text";},2500);};
+  try{navigator.clipboard.writeText(txt).then(()=>done(true),()=>done(false));}catch(e){done(false);}
+}
+
+/* ---------- boot ---------- */
+async function allowAll(){
+  if(!S.mcp)return;
+  for(const k of Object.keys(SRC)){
+    try{const r=await S.mcp.callTool(SERVER,TOOL,{spreadsheetId:SHEET,range:SRC[k]});handler(k)({type:"data",result:r});}
+    catch(e){handler(k)({type:"error",error:e});}
+  }
+}
+async function boot(){
+  render();
+  const claude=window.claude;
+  if(!claude||!claude.use){S.mcpNull=true;render();return;}
+  try{
+    const [mcp,dbx,user]=await Promise.all([claude.use("mcp"),claude.use("db"),claude.use("user")]);
+    if(user){try{S.canWrite=user.can?user.can("data.write"):null;}catch(e){}}
+    if(dbx){
+      db=dbx;S.dbOk=true;
+      db.collection("tasks").onSnapshot(s=>{S.tasks=s.docs.map(d=>Object.assign({id:d.id},d.data()));softRender();},()=>{S.dbOk=false;softRender();});
+      db.collection("scrubreq").onSnapshot(s=>{const o={};s.docs.forEach(d=>{o[d.id]=d.data();});S.scrubreq=o;renderScrub();},()=>{});
+      db.collection("fixes").onSnapshot(s=>{const o={};s.docs.forEach(d=>{o[d.id]=d.data();});S.fixes=o;softRender();},()=>{});
+      db.collection("strategy").onSnapshot(s=>{const o={};s.docs.forEach(d=>{o[d.id]=d.data();});S.strat=o;if(!(document.activeElement&&document.activeElement.dataset&&document.activeElement.dataset.sf!==undefined))softRender();},()=>{});
+    }
+    if(!mcp){S.mcpNull=true;render();return;}
+    S.mcp=mcp;
+    Object.keys(SRC).forEach(k=>{
+      mcp.watchTool(SERVER,TOOL,{spreadsheetId:SHEET,range:SRC[k]},handler(k),{refetchInterval:120000});
+    });
+  }catch(e){S.mcpNull=true;render();}
+}
+boot();
+})();
+</script>
+
+</body></html>
